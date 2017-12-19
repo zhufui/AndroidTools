@@ -19,6 +19,12 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
+        if (BuildConfig.DEBUG) {
+            initTools();
+        }
+    }
+
+    private void initTools() {
         //检测内存泄露
         LeakCanary.install(this);
 
